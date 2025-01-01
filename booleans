@@ -1,0 +1,9 @@
+z_one=(1<3)
+print(z_one)
+print (type(z_one))
+z_two=(5<4)
+print(z_two)
+print (type(z_two))
+z_three=not z_two
+print(z_three)
+print(type(z_three))
