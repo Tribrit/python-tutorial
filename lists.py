@@ -1,7 +1,7 @@
 #lists are used to store multiple items in a single variable
 # creating a list of names
-# 
-#  
+ 
+
 names="jordan,emma,lavine,warui,nyaga ,caleb"
 
 print(names)
