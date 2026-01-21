@@ -1,3 +1,4 @@
+#an implementation of bmi calculator
 height=float(input("please enter your height;"))
 weight=int(input("Please enter your weight;"))
 #to calculate bmi of different patients
