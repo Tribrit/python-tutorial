@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linda Urandu - Professional CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            padding: 30px 40px;
+        }
+        
+        .section-title {
+            color: #1e3a8a;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #3b82f6;
+            font-weight: 600;
+        }
+        
+        .summary {
+            background: #f0f7ff;
+            padding: 20px;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .competency-item {
+            background: #f0f7ff;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #1e3a8a;
+            font-weight: 500;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 6px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .job-header {
+            margin-bottom: 12px;
+        }
+        
+        .job-title {
+            color: #1e3a8a;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .job-company {
+            color: #4b5563;
+            font-weight: 500;
+            font-size: 1.05em;
+        }
+        
+        .job-date {
+            color: #6b7280;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+        .job-responsibilities {
+            list-style: none;
+            margin-top: 12px;
+        }
+        
+        .job-responsibilities li {
+            padding-left: 20px;
+            margin-bottom: 8px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .job-responsibilities li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        
+        .achievement {
+            background: #ecfdf5;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 4px;
+            border-left: 3px solid #10b981;
+            font-style: italic;
+        }
+        
+        .achievement strong {
+            color: #059669;
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f0f7ff;
+            border-radius: 4px;
+        }
+        
+        .education-title {
+            color: #1e3a8a;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .education-institution {
+            color: #4b5563;
+            margin-top: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 6px;
+            border-top: 3px solid #3b82f6;
+        }
+        
+        .skill-category h3 {
+            color: #1e3a8a;
+            margin-bottom: 12px;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-category li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .references {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .reference-card {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .reference-name {
+            color: #1e3a8a;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .reference-title {
+            color: #4b5563;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+        
+        .reference-contact {
+            color: #6b7280;
+            font-size: 0.85em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LINDA URANDU</h1>
+            <div class="contact-info">
+                <span>📍 Nairobi, Kenya</span>
+                <span>📞 0728-864301</span>
+                <span>✉️ lnamukuchu@gmail.com</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+            <div class="summary">
+                Results-driven Sales and Operations Professional with 14+ years of progressive experience in FMCG, retail merchandising, and branch management. Proven track record in driving revenue growth, managing key accounts, building strategic partnerships, and leading high-performing teams. Skilled in sales strategy execution, inventory management, and delivering exceptional customer experiences across multiple channels.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">CORE COMPETENCIES</h2>
+            <div class="competencies">
+                <div class="competency-item">Sales Strategy & Execution</div>
+                <div class="competency-item">Key Account Management</div>
+                <div class="competency-item">Team Leadership & Development</div>
+                <div class="competency-item">Inventory & Supply Chain Management</div>
+                <div class="competency-item">Visual Merchandising</div>
+                <div class="competency-item">Customer Relationship Management</div>
+                <div class="competency-item">Revenue Generation & Target Achievement</div>
+                <div class="competency-item">Market Intelligence & Analysis</div>
+                <div class="competency-item">Retail Operations Management</div>
+                <div class="competency-item">Negotiation & Partnership Building</div>
+                <div class="competency-item">Staff Training & Supervision</div>
+                <div class="competency-item">Administrative Operations</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Cleaner</div>
+                    <div class="job-company">Deluxe Cleaning Company</div>
+                    <div class="job-date">July 2025 - December 2025</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Maintained high standards of cleanliness and hygiene across assigned facilities</li>
+                    <li>Performed thorough cleaning of offices, restrooms, and common areas</li>
+                    <li>Managed cleaning supplies inventory and ensured proper storage of cleaning materials</li>
+                    <li>Followed safety protocols and proper handling of cleaning chemicals</li>
+                    <li>Responded promptly to special cleaning requests and maintained flexible schedule</li>
+                    <li>Ensured all areas met health and safety standards</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Waitress</div>
+                    <div class="job-company">Cafeteria RTS, Moi Barracks Eldoret</div>
+                    <div class="job-date">January 2025 - June 2025</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Provided excellent customer service to military personnel and guests in cafeteria setting</li>
+                    <li>Took orders accurately and served meals efficiently during peak hours</li>
+                    <li>Maintained cleanliness of dining areas, tables, and service stations</li>
+                    <li>Handled cash transactions and maintained accurate records of sales</li>
+                    <li>Ensured food safety and hygiene standards were consistently met</li>
+                    <li>Collaborated with kitchen staff to ensure timely meal service</li>
+                    <li>Managed customer inquiries and resolved complaints professionally</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Sales Representative</div>
+                    <div class="job-company">Eldoret Packers</div>
+                    <div class="job-date">August 2024 - December 2024</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Managed sales and distribution of products across assigned territory</li>
+                    <li>Built and maintained relationships with retail outlets and wholesale customers</li>
+                    <li>Achieved sales targets through effective customer engagement and product promotion</li>
+                    <li>Conducted market visits to ensure product availability and visibility</li>
+                    <li>Processed orders and coordinated with logistics for timely deliveries</li>
+                    <li>Provided product information and addressed customer inquiries</li>
+                    <li>Maintained accurate sales records and submitted regular performance reports</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Retail Shop Assistant</div>
+                    <div class="job-company">Retail Shop</div>
+                    <div class="job-date">January 2021 - May 2024</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Managed daily retail operations including customer service and sales transactions</li>
+                    <li>Handled inventory management, stock control, and merchandise display</li>
+                    <li>Processed customer purchases and maintained accurate cash handling procedures</li>
+                    <li>Ensured shop cleanliness and attractive product presentation</li>
+                    <li>Assisted customers with product selection and inquiries</li>
+                    <li>Monitored stock levels and coordinated with suppliers for replenishment</li>
+                    <li>Maintained positive customer relationships to encourage repeat business</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Branch Supervisor</div>
+                    <div class="job-company">Popote Bakeries Bungoma</div>
+                    <div class="job-date">June 2019 - December 2020</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Supervised daily operations and managed team of staff members to ensure optimal productivity and service delivery</li>
+                    <li>Oversaw pastry production, quality control, and inventory management to minimize waste and maximize profitability</li>
+                    <li>Implemented pricing strategies and procurement processes that improved cost efficiency</li>
+                    <li>Conducted staff training programs and managed scheduling to maintain consistent operational excellence</li>
+                    <li>Monitored and maintained high standards of product quality and customer service</li>
+                </ul>
+                <div class="achievement">
+                    <strong>Key Achievement:</strong> Maintained consistent operational standards while managing multiple facets of branch operations including staffing, production, and customer service.
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Sales Representative</div>
+                    <div class="job-company">Soko Sweety Ltd</div>
+                    <div class="job-date">August 2016 - May 2019</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Managed portfolio of retail outlets ensuring optimal product availability and visual merchandising standards</li>
+                    <li>Negotiated and secured premium shelf space across assigned territories, increasing product visibility</li>
+                    <li>Executed timely order placement and inventory management to prevent stock-outs and maximize sales opportunities</li>
+                    <li>Led new product launches and market presentations to drive category growth</li>
+                    <li>Monitored FIFO (First In, First Out) compliance and removed expired/damaged products to protect brand integrity</li>
+                    <li>Managed accounts receivable and collections, maintaining healthy cash flow</li>
+                    <li>Built and maintained strong relationships with retail partners and key stakeholders</li>
+                    <li>Consistently achieved and exceeded monthly and quarterly sales targets</li>
+                </ul>
+                <div class="achievement">
+                    <strong>Key Achievement:</strong> Successfully expanded distribution network and achieved sales targets through strategic account management and relationship building.
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Sales Merchandiser</div>
+                    <div class="job-company">Eveready East Africa Ltd</div>
+                    <div class="job-date">September 2015 - July 2016</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Negotiated shelf space acquisition and maintained optimal product placement in assigned retail outlets</li>
+                    <li>Ensured brand visibility through strategic product displays and adherence to merchandising standards</li>
+                    <li>Implemented and monitored FIFO inventory management systems across outlets</li>
+                    <li>Conducted market intelligence activities and provided actionable insights to management</li>
+                    <li>Executed marketing initiatives at trade and consumer levels to drive brand awareness</li>
+                    <li>Introduced new products to market and trained retail staff on product benefits</li>
+                    <li>Prepared and submitted detailed sales reports and performance analytics</li>
+                    <li>Developed strong partnerships with trading partners to enhance market penetration</li>
+                    <li>Achieved sales targets through proactive outlet management and customer engagement</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Receptionist</div>
+                    <div class="job-company">Gesonso Water Park Resort</div>
+                    <div class="job-date">December 2014 - June 2015</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Managed front desk operations and handled guest reservations with professionalism and efficiency</li>
+                    <li>Provided exceptional customer service while addressing guest concerns and inquiries</li>
+                    <li>Managed all correspondence including mail, email, and telephone communications</li>
+                    <li>Performed administrative duties including record keeping, filing, and inventory management</li>
+                    <li>Maintained organized reception area to ensure positive first impressions</li>
+                    <li>Coordinated with various departments to ensure seamless guest experiences</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Merchandiser</div>
+                    <div class="job-company">Eveready East Africa Ltd</div>
+                    <div class="job-date">September 2010 - July 2014</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Secured and maintained shelf space agreements with retail partners across assigned territory</li>
+                    <li>Executed planogram compliance to optimize product visibility and sales performance</li>
+                    <li>Conducted regular outlet audits to ensure product availability and display standards</li>
+                    <li>Managed product rotation and removal of expired/damaged goods to maintain quality standards</li>
+                    <li>Provided market intelligence reports to inform strategic decision-making</li>
+                    <li>Engaged in consumer marketing activities to drive product trials and brand loyalty</li>
+                    <li>Compiled and submitted comprehensive sales reports and market feedback</li>
+                    <li>Spearheaded new product introductions and in-store promotional activities</li>
+                    <li>Cultivated long-term relationships with retail partners to strengthen brand presence</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Merchandiser</div>
+                    <div class="job-company">Excel Chemicals Ltd</div>
+                    <div class="job-date">June 2007 - August 2010</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Negotiated shelf space and maintained product placement in assigned outlets</li>
+                    <li>Ensured product availability, cleanliness, and adherence to display standards</li>
+                    <li>Implemented FIFO inventory management protocols across retail locations</li>
+                    <li>Conducted competitor analysis and provided market intelligence to management</li>
+                    <li>Executed consumer engagement and marketing activities at point-of-sale</li>
+                    <li>Monitored sales performance and submitted regular reports to management</li>
+                    <li>Launched new products and conducted stock counts to maintain inventory accuracy</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Office Administrator</div>
+                    <div class="job-company">Dapako Investment</div>
+                    <div class="job-date">January 2006 - January 2007</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Managed front office operations reporting directly to the Manager</li>
+                    <li>Maintained organized filing systems for general and confidential documents</li>
+                    <li>Handled bookkeeping and financial record management</li>
+                    <li>Conducted regular stock-taking and inventory control</li>
+                    <li>Ensured smooth reception operations and professional visitor management</li>
+                    <li>Managed all correspondence including mail and telephone communications</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">ADDITIONAL EXPERIENCE</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Promotional Team Leader</div>
+                    <div class="job-company">ENZA Services</div>
+                </div>
+                <ul class="job-responsibilities">
+                    <li>Led promotional campaigns for Palmolive and Excel Chemicals products across multiple retail outlets</li>
+                    <li>Managed teams to achieve promotional objectives and sales targets</li>
+                    <li>Executed branded campaigns and drove sales through strategic merchandising and customer engagement</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="education-item">
+                <div class="education-title">Computer Skills Training</div>
+                <div class="education-institution">Exodus Computer College | May 2005</div>
+            </div>
+            <div class="education-item">
+                <div class="education-title">Kenya Certificate of Secondary Education (KCSE) - C Plain</div>
+                <div class="education-institution">Namirama Girls High School | 2000 - 2003</div>
+            </div>
+            <div class="education-item">
+                <div class="education-title">Kenya Certificate of Primary Education (KCPE)</div>
+                <div class="education-institution">James Gichuru Primary School | 1991 - 1999</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">SKILLS & COMPETENCIES</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Computer Literacy (MS Office Suite)</li>
+                        <li>Inventory Management Systems</li>
+                        <li>Sales Reporting & Analytics</li>
+                        <li>CRM Software</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Excellent written and verbal communication in English and Kiswahili</li>
+                        <li>Strong leadership and team management capabilities</li>
+                        <li>Adaptable to new environments and challenges</li>
+                        <li>Goal-oriented with focus on immediate and long-term objectives</li>
+                        <li>Effective multitasking with minimal supervision</li>
+                        <li>Strong interpersonal and relationship-building skills</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">REFERENCES</h2>
+            <div class="references">
+                <div class="reference-card">
+                    <div class="reference-name">Melap Were</div>
+                    <div class="reference-title">Manager, Cafeteria Recruiting Training School<br>Eldoret Barracks</div>
+                    <div class="reference-contact">Mobile: 0715-188634</div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-name">Simon Githae</div>
+                    <div class="reference-title">Key Accounts Manager<br>Eveready East Africa Ltd</div>
+                    <div class="reference-contact">Mobile: 0722-232888 | 0733-232888</div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-name">Sospeter Muthengi</div>
+                    <div class="reference-title">Regional Sales Manager</div>
+                    <div class="reference-contact">Mobile: 0735-313873</div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-name">Vincent Omollo</div>
+                    <div class="reference-title">Key Accounts<br>Kim-Fay East Africa Limited</div>
+                    <div class="reference-contact">Mobile: 0726-877554 | 0734-779900</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
